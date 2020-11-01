@@ -7,7 +7,7 @@ module.exports = function calculateHanoi(disksNumber, turnsSpeed) {
     };
 
     Result.turns = 2 ** disksNumber - 1;
-    Result.seconds = Result.turns / (turnsSpeed / 3600);
+    Result.seconds = Math.floor(Result.turns / (turnsSpeed / 3600));
 
     return Result;
 
